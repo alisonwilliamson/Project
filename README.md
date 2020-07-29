@@ -1,8 +1,9 @@
 
-## Description
+# Description
 
 ```
-A travel website, utilizing third party APIs, that allows you to search a city and view weather, hotels, activies and also search for flights through Kayak.
+A travel website, utilizing third party APIs, that allows you to search a city and view weather, 
+hotels, activies and also search for flights through Kayak.
 ```
 
 ## User Story
