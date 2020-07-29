@@ -4,33 +4,16 @@
     <meta charset="UTF-8" />
     <title>Safar</title>
 
-    <link
-      rel="stylesheet"
-      href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
-    />
-    
-    <link
-      rel="stylesheet"
-      href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
-      integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf"
-      crossorigin="anonymous"
-    />
-
-
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css"
-    />
-
-    <link
-      href="https://fonts.googleapis.com/icon?family=Material+Icons"
-      rel="stylesheet"
-    />
-
-    <link rel="stylesheet" href="style.css">
+    <!-- bootstrap ui css-->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"/>
+    <!-- materialize ui css -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css"/>
+    <!-- materialize icons css-->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet"/>
+    <!-- project css -->
+    <link rel="stylesheet" href="CSS/style.css">
   
   </head>
-
   <!-- navbar -->
   <div class="navbar-fixed">
     <nav class="red lighten-2">
@@ -44,7 +27,7 @@
             <li><a href="#home">Home</a></li>
             <li><a href="#search">Search</a></li>
             <li><a href="#weather">Weather</a></li>
-            <li><a href="#popular">Popular Cities</a></li>
+            <li><a href="#popular">Popular Destinations</a></li>
             <li><a href="#flights">Flights</a></li>
           </ul>
         </div>
@@ -57,7 +40,7 @@
     <li><a href="#home">Home</a></li>
     <li><a href="#search">Search</a></li>
     <li><a href="#weather">Weather</a></li>
-    <li><a href="#popular">Popular Cities</a></li>
+    <li><a href="#popular">Popular Destinations</a></li>
     <li><a href="#flights">Flights</a></li>
   </ul>
 
@@ -118,7 +101,7 @@
               <form class="input-field">
                 <input type="text" class="white grey-text" id="search-input" />
                 <button type="submit" class="btn btn-primary" id="search-btn">
-                  <i class="fa fa-search"></i>
+                  <i class="material-icons">search</i>
                 </button>
               </form>
             </div>
@@ -140,17 +123,16 @@
         </div>
       </section>
 
-      <!-- Popular Destinations -->
-      <section id="popular">
-        <div class="container">
+      <!-- popular Destinations -->
+      <section class="container" id="popular">
           <div class="row">
             <div class="col s12 m4">
               <h4 class="font-weight-bold teal-text">Popular Destinations</h4>
             </div>
           </div>
-        </div>
       </section>
 
+      <!-- first row -->
       <section class="section-icons lighten-4 center">
         <div class="container">
           <div class="row">
@@ -188,11 +170,8 @@
               </div>
             </div>
           </div>
-        </div>
-      </section>
 
-      <section class="section-icons lighten-4 center">
-        <div class="container">
+          <!-- second row -->
           <div class="row">
             <div class="col s12 m4">
               <div class="card">
@@ -231,17 +210,13 @@
         </div>
       </section>
 
-      <!-- Kayak -->
-      <section>
-        <div class="container">
+      <!-- search flights-->
+      <section class="container">
           <div class="row">
             <div class="col s12 m4">
-              <div>
                 <h4 class="text-center teal-text font-weight-bold">Make Your Plans a Reality: Search for Flights</h4>
-              </div>
             </div>
           </div>
-        </div>
       </section>
 
       <div class="row" id="flights">
@@ -269,22 +244,19 @@
     </footer>
   </body>
 
-  <!-- Scripts -->
+  <!-- jquery -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <!-- moment -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/moment-timezone/0.5.27/moment-timezone-with-data.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/moment-timezone/0.5.27/moment-timezone-utils.js"></script>
-
-  <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+  <!-- materialize -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
-  <!-- <script src="scountry-code-to-country-name-conversion.js"></script> -->
-
-  <!-- <script type="text/javascript" src="./jquery-3.4.1.min.js"></script> -->
+  <script src="scountry-code-to-country-name-conversion.js"></script>
+  <!-- kayak widget -->
   <script type="text/javaScript" src="https://www.kayak.com/affiliate/widget-v2.js"></script>
-
-  <!--<script type="text/javascript" src="JS/script.js"></script>-->
-
+  <!-- project js file -->
   <script type="text/javascript" src="JS/trip.js"></script>
-  
 
+  
 </html>

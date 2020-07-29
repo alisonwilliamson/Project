@@ -1,8 +1,9 @@
 
-## Description
+# Description
 
 ```
-A travel website, utilizing third party APIs, that allows you to search a city and view weather, hotels, activies and also search for flights through Kayak.
+A travel website, utilizing third party APIs, that allows you to search a city and view weather, 
+hotels, activies and also search for flights through Kayak.
 ```
 
 ## User Story
@@ -37,10 +38,9 @@ THEN I am taken to that part of the page
 ## Website Demo:
 [Demo GIF](assets/Safar_Travelwebsite.gif)
 
-```
 APIs Used:
-*Weather - Open Weather API
-*Trip - TripAdvisor via Rapid API
+Weather - Open Weather API,
+Trip - TripAdvisor via Rapid API
 
 Picture Source:
 https://www.pexels.com/search/videos/travel/
