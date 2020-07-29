@@ -217,7 +217,7 @@ function displayDayForeCast() {
 }
 
 function addCardDeckHeader() {
-  deckHeader = $("<h4>").text("Weekly Forecast").attr("id", "card-deck-title");
+  deckHeader = $("<h4 class='font-weight-bold teal-text'>").text("Weekly Forecast").attr("id", "card-deck-title");
   deckHeader.addClass("pt-4 pt-2");
   $(".card-deck").before(deckHeader);
 }
@@ -439,3 +439,23 @@ Promise.all([
     // if there's an error, log it
     console.log(error);
   });
+
+  KAYAK.embed({
+    container: document.getElementById("kayakSearchWidgetContainer"),
+    hostname: "www.kayak.com",
+    autoPosition: true,
+    defaultProduct: "flights",
+    enabledProducts: ["flights"],
+    startDate: "2018-10-02",
+    endDate: "2018-10-28",
+    origin: "New York, NY",
+    destination: "Boston, MA",
+    ssl: true,
+    affiliateId: "acme_corp",
+    isInternalLoad: false,
+    lc: "en",
+    cc: "us",
+    mc: "EUR"
+    });
+
+  
