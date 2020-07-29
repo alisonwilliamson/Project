@@ -37,8 +37,8 @@ THEN I am taken to that part of the page
 ```
 
 APIs Useed:
-*Weather - Open Weather API
-*Trip - TripAdvisor via Rapid API
+Weather - Open Weather API,
+Trip - TripAdvisor via Rapid API
 
 Picture Source:
 https://www.pexels.com/search/videos/travel/
