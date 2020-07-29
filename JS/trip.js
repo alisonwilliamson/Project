@@ -3,6 +3,13 @@ $("#search-btn").on("click", function () {
   callTripAdvisor(city);
 });
 
+//when user clicks on "X"" icon, it clears ALL. 
+$("#clear-btn").on("click", function()  {
+  //Reresh page, then clear ALL
+  location.reload(true);
+  localStorage.clear();
+});
+
 function callTripAdvisor(city) {
   var settings = {
     async: true,
