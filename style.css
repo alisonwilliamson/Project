@@ -46,3 +46,9 @@ h2:after {
   margin: 70px 50px 55px;
   padding: 10px 10px;
 }
+
+#kayak {
+  font-weight: bolder;
+  color: black;
+  font-size: large;
+}
