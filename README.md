@@ -34,8 +34,11 @@ THEN I am directed to the Kayak website that will display flights for the inform
 WHEN I click on a tab on the navbar
 THEN I am taken to that part of the page
 ```
+## Website Demo:
+[Demo GIF](assets/Safar_Travelwebsite.gif)
 
-APIs Useed:
+```
+APIs Used:
 *Weather - Open Weather API
 *Trip - TripAdvisor via Rapid API
 
@@ -45,3 +48,7 @@ https://www.pexels.com/search/videos/travel/
 Deployed: https://brandonkett21.github.io/Project/
 
 GitHub Repo: https://github.com/brandonkett21/Team-Project
+
+## Website Demo:
+[Demo GIF](assets/Safar_Travelwebsite.gif)
+
