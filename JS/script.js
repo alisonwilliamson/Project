@@ -31,19 +31,13 @@ var currentDate = "";
 var tempF = "";
 var humidityValue = "";
 var windSpeed = "";
-var uvIndexValue = "";
-var latitude = "";
-var longitude = "";
 var minTempK = "";
-var maxTempK = "";
 var minTempF = "";
 var maxTempF = "";
-var dayhumidity = "";
 var currentWeatherIconCode = "";
 var currentWeatherIconUrl = "";
 var iconcode = "";
 var iconurl = "";
-var country = "";
 var listOfSearchedCities = [];
 
 // SET LOCAL STORAGE:
@@ -65,7 +59,7 @@ $(document).ready(function () {
   }
 });
 
-// SEARCH BUTTON FXN
+// SEARCH BUTTON Function
 $("#search-btn").on("click", function () {
   event.preventDefault();
   clearDisplayedWeatherInfo();
@@ -105,6 +99,7 @@ $(document).on("click", ".list-group-item", function () {
   resetGlobalVariables();
   searchCity(cityName);
 });
+
 function displayCurrentWeather() {
   var cardDiv = $("<div class='container border bg-light'>");
   var weatherImage = $("<img>").attr("src", currentWeatherIconUrl);
@@ -113,16 +108,10 @@ function displayCurrentWeather() {
   var temperatureEl = $("<p>").text("Temperature: " + tempF + " ºF");
   var humidityEl = $("<p>").text("Humidity: " + humidityValue + "%");
   var windSpeedEl = $("<p>").text("Wind Speed: " + windSpeed + " MPH");
-  var uvIndexEl = $("<p>").text("UV Index: ");
-  var uvIndexValueEl = $("<span>")
-    .text(uvIndexValue)
-    .css("background-color", getColorCodeForUVIndex(uvIndexValue));
-  uvIndexEl.append(uvIndexValueEl);
   cardDiv.append(cardHeader);
   cardDiv.append(temperatureEl);
   cardDiv.append(humidityEl);
   cardDiv.append(windSpeedEl);
-  cardDiv.append(uvIndexEl);
   $("#current-weather-conditions").append(cardDiv);
 }
 
@@ -144,13 +133,9 @@ function displayDayForeCast() {
   var maxTempEl = $("<p>")
     .text("Max Temp: " + maxTempF + " ºF")
     .css("font-size", "1.25rem");
-  var humidityEl = $("<p>")
-    .text("Humidity: " + dayhumidity + "%")
-    .css("font-size", "1.25rem");
   cardTextDiv.append(imgEl);
   cardTextDiv.append(minTempEl);
   cardTextDiv.append(maxTempEl);
-  cardTextDiv.append(humidityEl);
   cardTitleDiv.append(cardTitleHeader);
   cardBlockDiv.append(cardTitleDiv);
   cardBlockDiv.append(cardTextDiv);
@@ -169,6 +154,7 @@ function clearDisplayedWeatherInfo() {
   $("#card-deck-title").remove();
   $(".card-deck").empty();
 }
+
 function displayCities(citiesList) {
   $("#searched-cities-card").removeClass("hide");
   var count = 0;
@@ -181,22 +167,7 @@ function displayCities(citiesList) {
     </a>`);
   }
 }
-function getColorCodeForUVIndex(uvIndex) {
-  var uvIndexValue = parseFloat(uvIndex);
-  var colorcode = "";
-  if (uvIndexValue <= 2) {
-    colorcode = "#00FF00";
-  } else if (uvIndexValue > 2 && uvIndexValue <= 5) {
-    colorcode = "#FFFF00";
-  } else if (uvIndexValue > 5 && uvIndexValue <= 7) {
-    colorcode = "#FFA500";
-  } else if (uvIndexValue > 7 && uvIndexValue <= 10) {
-    colorcode = "#9E1A1A";
-  } else if (uvIndexValue > 10) {
-    colorcode = "#7F00FF";
-  }
-  return colorcode;
-}
+
 function resetGlobalVariables() {
   city = "";
   currentDate = "";
@@ -217,6 +188,7 @@ function resetGlobalVariables() {
   iconurl = "";
   country = "";
 }
+
 function searchCity(cityName) {
   // build URL to query the database
   console.log(cityName);
@@ -293,6 +265,7 @@ $("#search-btn").on("click", function () {
   callTripAdvisor(city);
 });
 
+// trip advisor api call
 function callTripAdvisor(city) {
   var settings = {
     async: true,
@@ -374,6 +347,6 @@ Promise.all([
     // if there's an error, log it
     console.log(error);
 });
-    })
+    });
     // ...
 });
