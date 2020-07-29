@@ -64,7 +64,9 @@ function displayTripAdivsor(response) {
     $(cardBody).append(cardText);
 
     $(cardLink).addClass("card-action");
+    $(cardLink).append('<a href="https://www.tripadvisor.com/Hotel_Review-g35805-d">Reviews</a>');
     $(cardDiv).append(cardLink);
+
   }
 }
 
@@ -359,7 +361,7 @@ function callTripAdvisor(city) {
     method: "GET",
     headers: {
       "x-rapidapi-host": "tripadvisor1.p.rapidapi.com",
-      "x-rapidapi-key": "5ac62cb935mshb3eac24b9617fe8p1003a4jsncbd2d3214566",
+      "x-rapidapi-key": "944755632cmsh5c5a4ac9642c81dp14a708jsn7fa83411852d",
     },
   };
 
@@ -379,14 +381,15 @@ function displayTripAdivsor(response) {
     var cardSubtitle = $("<div>");
     var cardText = $("<div>");
     var cardLink = $("<div>");
+  
 
-    $(cardDivBlock).addClass("col-4");
+    $(cardDivBlock).addClass("col-4 d-flex ");
     $("#trip2").append(cardDivBlock);
 
     $(cardDiv).addClass("card");
     $(cardDivBlock).append(cardDiv);
 
-    $(cardImage).addClass("card-image");
+    $(cardImage).addClass("card-image d-flex");
     $(cardImage).append(
       "<img src =" +
         response.data[i].result_object.photo.images.original.url +
@@ -401,15 +404,16 @@ function displayTripAdivsor(response) {
     $(cardTitle).text(response.data[i].result_object.name);
     $(cardBody).append(cardTitle);
 
-    $(cardSubtitle).addClass("card-subtitle");
-    $(cardSubtitle).text(response.data[i].result_type);
-    $(cardBody).append(cardSubtitle);
+   // $(cardSubtitle).addClass("card-subtitle");
+    //$(cardSubtitle).text(response.data[i].result_type);
+  //  $(cardBody).append(cardSubtitle);
 
     $(cardText).addClass("card-text");
-    $(cardText).text(response.data[i].result_object.category.key);
+    $(cardText).text(response.data[i].result_object.category.name);
     $(cardBody).append(cardText);
-
+   
     $(cardLink).addClass("card-action");
+    $(cardLink).append( "<a target='_blank' href='https://www.tripadvisor.com/Hotel_Review-g35805-d" +  response.data[i].result_object.location_id + "-Reviews-" + response.data[i].result_object.name + "-" + response.data[i].result_object.location_string +"'>"+" Reviews </a>");
     $(cardDiv).append(cardLink);
   }
 }
