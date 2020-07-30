@@ -36,7 +36,6 @@ WHEN I click on a tab on the navbar
 THEN I am taken to that part of the page
 ```
 
-
 APIs Used:
 Weather - Open Weather API,
 Trip - TripAdvisor via Rapid API
