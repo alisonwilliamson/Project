@@ -97,7 +97,7 @@
             <div class="col s12">
               <h4 class="font-weight-bold">Search a Destination:</h4>
               <form class="input-field">
-                <input type="text" class="white grey-text" id="search-input" />
+                <input type="text" class="white grey-text" id="search-input" placeholder="Detroit, Michigan..."/>
                 <button type="submit" class="btn btn-primary" id="search-btn">
                   <i class="material-icons">search</i>
                 </button>
@@ -113,14 +113,16 @@
 
       <!-- where forecast shows up -->
       <div class="container">
+        <div class="day-results"></div>
         <div class="row" id="five-day-forecast">
           <div class="card-deck w-100" id="weather"></div>
         </div>
       </div>
 
       <!-- where activities and hotels show up when you search a city -->
-      <section class="section-icons grey lighten-4 center">
+      <section class="section-icons grey lighten-4">
         <div class="container">
+          <div class="results-header"></div>
           <div class="row" id="trip2"></div>
         </div>
       </section>
@@ -254,11 +256,8 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/moment-timezone/0.5.27/moment-timezone-utils.js"></script>
   <!-- materialize -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
-  <script src="scountry-code-to-country-name-conversion.js"></script>
   <!-- kayak widget -->
   <script type="text/javaScript" src="https://www.kayak.com/affiliate/widget-v2.js"></script>
   <!-- project js file -->
   <script type="text/javascript" src="JS/trip.js"></script>
-
-  
 </html>
