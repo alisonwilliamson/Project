@@ -157,6 +157,7 @@ function searchCity(cityName) {
 // creates cards for the weather to be displayed
 function displayDayForeCast() {
   $(".day-results").html("<h4 class='font-weight-bold teal-text'>5-Day Forecast</h4>").append("<div class='row'>");
+  
   var imgEl = $("<img>").attr("src", iconurl);
   var cardEl = $("<div class='card'>").addClass("pl-1 bg-light text-dark center");
   var cardBlockDiv = $("<div>").attr("class", "card-block");
@@ -189,7 +190,7 @@ function callTripAdvisor(city) {
     method: "GET",
     headers: {
       "x-rapidapi-host": "tripadvisor1.p.rapidapi.com",
-      "x-rapidapi-key": "944755632cmsh5c5a4ac9642c81dp14a708jsn7fa83411852d",
+      "x-rapidapi-key": "c86351f800msh66a90fb0ca87ca0p192d84jsnb389b451c06a",
     },
   };
 
@@ -239,5 +240,3 @@ KAYAK.embed({
   cc: "us",
   mc: "EUR"
   });
-
-  
